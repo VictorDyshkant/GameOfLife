@@ -1,0 +1,36 @@
+.body{
+    background-color: #333;
+    height: 98vh;
+}
+#canvas
+{
+    background-color: white;
+    margin: auto;
+}
+.canvas-div
+{ 
+    padding-top: 100px;
+    background-color: #333;
+    text-align: center;
+}
+
+.div-components
+{  
+    display: flex;
+    align-items: center;
+    justify-content: center 
+}
+
+.pannel
+{
+    margin-left: 20px;
+}
+
+.button-div{
+    margin-top: 20px;
+}
+
+button
+{
+        height: 30px;
+}

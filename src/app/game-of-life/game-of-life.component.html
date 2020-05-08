@@ -1,0 +1,35 @@
+<body>
+<!--  <div id='div-canvas'>
+    <canvas #canvas width="600" height="600"></canvas>
+</div>-->
+<div id="div-components">
+    <div>
+        <div id='div-seles' [ngStyle]="{'width': size * squareLenght+'px', 'height' : size * squareLenght+'px'}">
+            <div *ngFor="let column of grid; let x = index">
+                <div *ngFor="let cell of column; let y = index" class="cell"
+                    [ngStyle]="{'left': x*squareLenght+'px', 'top' : y*squareLenght+'px','width': squareLenght+'px', 'height' : squareLenght+'px'}"
+                    (click)="addCell(x,y)" [style.background-color]="cell == 1 ? 'yellow' : 'none'">
+                </div>
+            </div>
+        </div>
+        <div class="pannel">
+            <div>
+                <select (change)="selectType($event)">
+                    <option *ngFor="let type of mapType">{{type}}</option>
+                </select>
+
+                <button (click)="nextIteration()">Next</button>
+                <button *ngIf='!isRun' (click)="start()">Start</button>
+                <button *ngIf='isRun' (click)="stop()">Stop</button>
+                <select (change) = "changeSpeed($event)">
+                    <option value="1000">X1 </option>
+                    <option value="500">X2 </option>
+                    <option value="200">X5 </option>
+                    <option value="100">X10 </option>
+                </select>
+                <span>Count {{count}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
